@@ -24,7 +24,6 @@ body {
     border-bottom-width: 15px;
     background-color: black;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px 0px, rgba(0, 0, 0, 0.15) 0px 1px 3px 1px;
-    cursor: pointer;
 }
 
 .mobile:hover {
@@ -129,6 +128,7 @@ body {
 }
 
 .mobile .screen .actions .accept {
+    cursor: pointer;
     height: 35px;
     width: 35px;
     border-radius: 50%;

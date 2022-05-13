@@ -103,6 +103,12 @@ body {
     transition: all ease-in-out 1s;
 }
 
+.computer:hover .folder-body {
+    height: 70px;
+    font-size: 24px;
+    transition: all ease-in-out 1s;
+}
+
 .folder-row {
     width: 100%;
     display: flex;
@@ -147,21 +153,19 @@ body {
 }
 
 .folder .folder-body {
-    height: 70px;
+    display: block;
+    height: 0px;
     width: 100px;
     background-color: #dcce6f;
     text-align: center;
     font-family: 'Koulen', cursive;
-    font-size: 24px;
+    font-size: 0px;
     line-height: 80px;
     margin: auto;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
-}
-
-.folder .folder-body a {
     text-decoration: none;
     color: black;
 }
