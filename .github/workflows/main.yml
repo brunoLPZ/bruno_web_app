@@ -1,0 +1,34 @@
+# Deploy Web App to Blob
+
+name: Deploy WebApp
+
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name brunowebaccount --auth-mode key -d '$web' -s .
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/*" --profile-name "brunowebcdn" --name "https://brunowebcdn.azureedge.net" --resource-group "personalwebapprg"
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
