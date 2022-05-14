@@ -7,7 +7,7 @@ const workData = [
   {
     work: 'DESARROLLADOR FULLSTACK\n(CINFONI)',
     place: 'Imatia Innovation',
-    date: '2018 - 2021',
+    date: '2019 - 2021',
   },
   {
     work: 'DESARROLLADOR FULLSTACK\n(BCP)',
