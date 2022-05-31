@@ -1,30 +1,13 @@
 import './App.css';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink,
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './home/Home';
 import { Explore } from './explore/Explore';
+import { Nav } from './nav/Nav';
 
 function App() {
   return (
     <Router>
-      <nav className='App-Nav'>
-        <NavLink
-          to='/'
-          className={({ isActive }) => (isActive ? 'App-Nav-Active' : '')}
-        >
-          home
-        </NavLink>
-        <NavLink
-          to='/experience'
-          className={({ isActive }) => (isActive ? 'App-Nav-Active' : '')}
-        >
-          experiencia
-        </NavLink>
-      </nav>
+      <Nav></Nav>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/experience' element={<Explore />}></Route>
@@ -38,9 +21,9 @@ function NotFound() {
   return (
     <div
       style={{
-        height: 'calc(100vh - 30px)',
+        height: 'calc(100vh - 50px)',
         textAlign: 'center',
-        padding: '15px',
+        paddingTop: '50px',
       }}
     >
       <svg

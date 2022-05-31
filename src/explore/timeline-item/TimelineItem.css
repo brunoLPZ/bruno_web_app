@@ -49,8 +49,8 @@
 }
 
 .Explore-Timeline-Year {
-    font-family: 'Pacifico';
-    font-size: 30px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 50px;
     padding: 0px 25px;
 }
 
@@ -116,7 +116,7 @@
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     .Explore-Timeline-Year {
-        font-size: 40px;
+        font-size: 60px;
     }
 
     .Timeline-Details {
@@ -132,7 +132,7 @@
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
     .Explore-Timeline-Year {
-        font-size: 50px;
+        font-size: 70px;
     }
 
     .Timeline-Details {
@@ -155,7 +155,7 @@
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .Explore-Timeline-Year {
-        font-size: 60px;
+        font-size: 80px;
     }
 
     .Timeline-Details {
@@ -175,7 +175,7 @@
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     .Explore-Timeline-Year {
-        font-size: 70px;
+        font-size: 90px;
     }
 
     .Timeline-Details {
@@ -195,7 +195,7 @@
 /*XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {
     .Explore-Timeline-Year {
-        font-size: 80px;
+        font-size: 100px;
     }
 
     .Timeline-Details {

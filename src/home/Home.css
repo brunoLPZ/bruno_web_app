@@ -10,11 +10,11 @@
 }
 
 .Home-Title {
-    width: 300px;
-    height: 90px;
-    font-size: 40px;
+    font-size: 50px;
     font-family: 'Shadows Into Light', cursive;
-    margin-top: 40px;
+    margin: 5px;
+    transform: scale(0);
+    animation: scaleUp 0.5s ease-in 0s forwards;
 }
 
 .Home-Subtitle {
@@ -68,7 +68,6 @@
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     .Home-Title {
-        width: 350px;
         font-size: 60px;
     }
 
@@ -77,7 +76,6 @@
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
     .Home-Title {
-        width: 400px;
         font-size: 70px;
     }
 
@@ -101,7 +99,6 @@
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
     .Home-Title {
-        width: 420px;
         font-size: 80px;
     }
 
@@ -113,7 +110,6 @@
 /*X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
     .Home-Title {
-        width: 440px;
         font-size: 90px;
     }
 
@@ -125,71 +121,10 @@
 /*XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {
     .Home-Title {
-        width: 460px;
         font-size: 120px;
     }
 
     .Home-Subtitle {
         font-size: 70px;
-    }
-}
-
-.Home-Title-Mask {
-    fill: none;
-    stroke: white;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-}
-
-.Home-Title-Mask:nth-child(1) {
-    animation: strokeOffset 0.1s linear forwards;
-}
-
-.Home-Title-Mask:nth-child(2) {
-    animation: strokeOffset 0.1s linear 0.1s forwards;
-}
-
-.Home-Title-Mask:nth-child(3) {
-    animation: strokeOffset 0.1s linear 0.2s forwards;
-}
-
-
-.Home-Title-Mask:nth-child(4) {
-    animation: strokeOffset 0.1s linear 0.3s forwards;
-}
-
-.Home-Title-Mask:nth-child(5) {
-    animation: strokeOffset 0.1s linear 0.4s forwards;
-}
-
-.Home-Title-Mask:nth-child(6) {
-    animation: strokeOffset 0.1s linear 0.5s forwards;
-}
-
-.Home-Title-Mask:nth-child(7) {
-    animation: strokeOffset 0.1s linear 0.6s forwards;
-}
-
-.Home-Title-Mask:nth-child(8) {
-    animation: strokeOffset 0.1s linear 0.7s forwards;
-}
-
-.Home-Title-Mask:nth-child(9) {
-    animation: strokeOffset 0.1s linear 0.8s forwards;
-}
-
-.Home-Title-Mask:nth-child(10) {
-    animation: strokeOffset 0.1s linear 0.9s forwards;
-}
-
-.Home-Title-Mask:nth-child(11) {
-    animation: strokeOffset 0.1s linear 1s forwards;
-}
-
-
-@keyframes strokeOffset {
-    to {
-        stroke-dashoffset: 0;
-        fill: black;
     }
 }

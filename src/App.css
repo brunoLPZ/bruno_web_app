@@ -3,14 +3,16 @@
     gap: 20px;
     padding-top: 20px;
     padding-left: 20px;
+    padding-bottom: 30px;
     justify-content: flex-start;
     position: fixed;
-    background-color: #1a1a1a;
+    background-color: #c3d4dc;
     border-bottom-right-radius: 100%;
-    width: 200px;
+    font-size: 20px;
+    width: 260px;
+    height: 70px;
     height: 50px;
     border-bottom-left-radius: 50px;
-    font-size: 14px;
     z-index: 1;
     /*border-bottom: 1px solid;*/
 }
@@ -20,11 +22,11 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
-    color: white;
+    color: black;
 }
 
 .App-Nav a.App-Nav-Active {
-    border-bottom: 1px solid yellow;
+    border-bottom: 1px solid;
 }
 
 #AvatarSurpriseSvg {
@@ -49,22 +51,10 @@
 }
 
 /*Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    .App-Nav {
-        font-size: 18px;
-        width: 220px;
-        height: 60px;
-    }
-}
+@media (min-width: 576px) {}
 
 /*Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-    .App-Nav {
-        font-size: 20px;
-        width: 260px;
-        height: 70px;
-    }
-}
+@media (min-width: 768px) {}
 
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
