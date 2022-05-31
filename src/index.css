@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Pacifico&family=Shadows+Into+Light&display=swap');
+
+:root {}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+h1,
+h2 {
+  user-select: none;
+}

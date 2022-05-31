@@ -1,0 +1,195 @@
+.Home-Container {
+    display: flex;
+    height: calc(100vh - 100px);
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    padding-top: 100px;
+    overflow: hidden;
+    /*background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(198, 230, 255, 1) 100%);*/
+}
+
+.Home-Title {
+    width: 300px;
+    height: 90px;
+    font-size: 40px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-top: 40px;
+}
+
+.Home-Subtitle {
+    font-size: 30px;
+    margin: 10px 0;
+    font-weight: 100;
+    transform: scale(0);
+    animation: scaleUp 0.5s ease-in 2s forwards;
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1);
+    }
+}
+
+.Home-Title-Container {
+    padding: 15px;
+}
+
+.Align-Right {
+    text-align: right;
+}
+
+.Home-Shortcuts a {
+    display: block;
+}
+
+.Home-Blue {
+    color: #0a66c2;
+}
+
+.Home-Red {
+    color: #d93025;
+}
+
+.Home-Shortcuts {
+    display: flex;
+    margin-top: 20px;
+    position: relative;
+    right: -1000px;
+    animation: setRightPositionZero 1s ease-in 0s forwards;
+}
+
+@keyframes setRightPositionZero {
+    to {
+        right: 0;
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .Home-Title {
+        width: 350px;
+        font-size: 60px;
+    }
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .Home-Title {
+        width: 400px;
+        font-size: 70px;
+    }
+
+    .Home-Subtitle {
+        font-size: 40px;
+    }
+
+    .Home-Container {
+        justify-content: space-around;
+        flex-direction: row;
+        background: rgb(255, 255, 255);
+        /*background: linear-gradient(90deg, rgba(255, 255, 255, 1) 75%, rgba(198, 230, 255, 1) 100%);*/
+    }
+
+    .Home-Shortcuts {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .Home-Title {
+        width: 420px;
+        font-size: 80px;
+    }
+
+    .Home-Subtitle {
+        font-size: 50px;
+    }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .Home-Title {
+        width: 440px;
+        font-size: 90px;
+    }
+
+    .Home-Subtitle {
+        font-size: 60px;
+    }
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    .Home-Title {
+        width: 460px;
+        font-size: 120px;
+    }
+
+    .Home-Subtitle {
+        font-size: 70px;
+    }
+}
+
+.Home-Title-Mask {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+
+.Home-Title-Mask:nth-child(1) {
+    animation: strokeOffset 0.1s linear forwards;
+}
+
+.Home-Title-Mask:nth-child(2) {
+    animation: strokeOffset 0.1s linear 0.1s forwards;
+}
+
+.Home-Title-Mask:nth-child(3) {
+    animation: strokeOffset 0.1s linear 0.2s forwards;
+}
+
+
+.Home-Title-Mask:nth-child(4) {
+    animation: strokeOffset 0.1s linear 0.3s forwards;
+}
+
+.Home-Title-Mask:nth-child(5) {
+    animation: strokeOffset 0.1s linear 0.4s forwards;
+}
+
+.Home-Title-Mask:nth-child(6) {
+    animation: strokeOffset 0.1s linear 0.5s forwards;
+}
+
+.Home-Title-Mask:nth-child(7) {
+    animation: strokeOffset 0.1s linear 0.6s forwards;
+}
+
+.Home-Title-Mask:nth-child(8) {
+    animation: strokeOffset 0.1s linear 0.7s forwards;
+}
+
+.Home-Title-Mask:nth-child(9) {
+    animation: strokeOffset 0.1s linear 0.8s forwards;
+}
+
+.Home-Title-Mask:nth-child(10) {
+    animation: strokeOffset 0.1s linear 0.9s forwards;
+}
+
+.Home-Title-Mask:nth-child(11) {
+    animation: strokeOffset 0.1s linear 1s forwards;
+}
+
+
+@keyframes strokeOffset {
+    to {
+        stroke-dashoffset: 0;
+        fill: black;
+    }
+}

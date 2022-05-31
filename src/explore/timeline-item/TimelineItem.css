@@ -1,0 +1,212 @@
+.Explore-Timeline {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 10px;
+    height: calc(100vh - 160px);
+    transform: translateY(200px);
+    opacity: 0;
+    transition: 2s all ease;
+    overflow: hidden;
+}
+
+.Explore-Timeline.Explore-Active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Explore-Timeline-Separator {
+    background-color: black;
+    width: 1px;
+}
+
+.Explore-Timeline-Column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 700px;
+    transition: 1s all ease;
+}
+
+.Timeline-Column-Left {
+    position: relative;
+    left: -1000px;
+}
+
+
+.Timeline-Column-Right {
+    position: relative;
+    right: -1000px;
+}
+
+.Timeline-Column-Reveal-Left {
+    left: 0;
+}
+
+.Timeline-Column-Reveal-Right {
+    right: 0;
+}
+
+.Explore-Timeline-Year {
+    font-family: 'Pacifico';
+    font-size: 30px;
+    padding: 0px 25px;
+}
+
+.Explore-Year-Right {
+    text-align: right;
+}
+
+.Explore-Year-Left {
+    text-align: left;
+}
+
+.Timeline-Details {
+    padding: 0px 25px;
+    margin-top: 50px;
+}
+
+.Timeline-Details-Right {
+    text-align: right;
+}
+
+.Timeline-Details-Left {
+    text-align: left;
+}
+
+.Timeline-Details-Column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px 0px;
+}
+
+.Timeline-Details-Label {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.Timeline-Details-Value {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.Timeline-Details-Tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.Timeline-Tag {
+    background-color: #216aa6;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #f5f5f5;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.Timeline-Picture {
+    width: inherit;
+    margin-top: 30px;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .Explore-Timeline-Year {
+        font-size: 40px;
+    }
+
+    .Timeline-Details {
+        margin-top: 70px;
+    }
+
+    .Timeline-Tag {
+        font-size: 14px;
+    }
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .Explore-Timeline-Year {
+        font-size: 50px;
+    }
+
+    .Timeline-Details {
+        margin-top: 80px;
+    }
+
+    .Timeline-Details-Label {
+        font-size: 25px;
+    }
+
+    .Timeline-Details-Value {
+        font-size: 25px;
+    }
+
+    .Timeline-Tag {
+        font-size: 16px;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .Explore-Timeline-Year {
+        font-size: 60px;
+    }
+
+    .Timeline-Details {
+        margin-top: 90px;
+    }
+
+    .Timeline-Details-Label {
+        font-size: 30px;
+    }
+
+    .Timeline-Details-Value {
+        font-size: 30px;
+    }
+
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .Explore-Timeline-Year {
+        font-size: 70px;
+    }
+
+    .Timeline-Details {
+        margin-top: 100px;
+    }
+
+    .Timeline-Details-Label {
+        font-size: 35px;
+    }
+
+    .Timeline-Details-Value {
+        font-size: 35px;
+    }
+
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    .Explore-Timeline-Year {
+        font-size: 80px;
+    }
+
+    .Timeline-Details {
+        margin-top: 140px;
+    }
+
+    .Timeline-Details-Label {
+        font-size: 40px;
+    }
+
+    .Timeline-Details-Value {
+        font-size: 40px;
+    }
+}

@@ -1,0 +1,125 @@
+.Avatar-Svg {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    right: -1000px;
+    background-color: #1a1a1a;
+    border-radius: 50%;
+    animation: setRightPositionZero 1s ease-in 0s forwards;
+}
+
+@keyframes setRightPositionZero {
+    to {
+        right: 0;
+    }
+}
+
+#Avatar {
+    transform: translateY(40px);
+}
+
+#LeftEyeBrow {
+    animation: goDown 5s ease-in-out 0s infinite alternate forwards;
+}
+
+#RightEyeBrow {
+    animation: goUp 5s ease-in-out 0s infinite alternate forwards;
+}
+
+#InnerLeftEye {
+    animation: goLeftRight 5s ease-in-out 0s infinite alternate forwards;
+}
+
+#InnerRightEye {
+    animation: goLeftRight 5s ease-in-out 0s infinite alternate forwards;
+}
+
+#Mouth,
+#Moustache {
+    transform-origin: center;
+    animation: rotateRight 5s ease-in-out 0s infinite alternate forwards;
+}
+
+#Clothes {
+    transform: translateY(26px);
+}
+
+@keyframes goDown {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes goUp {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes goLeftRight {
+    0% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes rotateRight {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .Avatar-Svg {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    .Avatar-Svg {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .Avatar-Svg {
+        width: 350px;
+        height: 350px;
+    }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+    .Avatar-Svg {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    .Avatar-Svg {
+        width: 450px;
+        height: 450px;
+    }
+}

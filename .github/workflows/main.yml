@@ -15,12 +15,25 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
+      - name: Build
+        run: |
+          npm install
+          npm run build
       - name: Upload to blob storage
         uses: azure/CLI@v1
         with:
           inlineScript: |
-            az storage blob upload-batch --overwrite --account-name brunowebaccount --auth-mode key -d '$web' -s web
+            az storage blob upload-batch --overwrite --account-name brunowebaccount --auth-mode key -d '$web' -s build
       - name: Purge CDN endpoint
         uses: azure/CLI@v1
         with:
