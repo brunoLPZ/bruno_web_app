@@ -20,10 +20,10 @@ export class Home extends Component {
             rel='noreferrer'
             className='Home-Blue'
           >
-            <LinkedIn sx={{ fontSize: 40 }}></LinkedIn>
+            <LinkedIn sx={{ fontSize: 64 }}></LinkedIn>
           </a>
           <a href='mailto:bruno.lopez.trigo@outlook.com' className='Home-Red'>
-            <EmailOutlined sx={{ fontSize: 40 }}></EmailOutlined>
+            <EmailOutlined sx={{ fontSize: 64 }}></EmailOutlined>
           </a>
         </div>
       </div>
