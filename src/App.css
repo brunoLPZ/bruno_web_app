@@ -53,7 +53,6 @@
 @media (min-width: 992px) {
     .App-Nav {
         font-size: 24px;
-        width: 300px;
         height: 80px;
     }
 }
@@ -62,7 +61,6 @@
 @media (min-width: 1200px) {
     .App-Nav {
         font-size: 32px;
-        width: 380px;
         height: 100px;
     }
 }

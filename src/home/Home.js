@@ -15,7 +15,7 @@ export class Home extends Component {
         <Avatar></Avatar>
         <div className='Home-Shortcuts'>
           <a
-            href='https://www.linkedin.com/in/bruno-l%C3%B3pez-trigo-514213137/'
+            href='https://es.linkedin.com/in/brunolopeztrigo/'
             target='_blank'
             rel='noreferrer'
             className='Home-Blue'
