@@ -29,9 +29,6 @@ export function TimelineItem(props) {
   };
 
   useEffect(() => {
-    window.scrollTo({
-      top: 1,
-    });
     window.addEventListener('scroll', handleScroll);
 
     return () => {
@@ -40,8 +37,8 @@ export function TimelineItem(props) {
   });
 
   return (
-    <div className='Explore-Timeline'>
-      <div className='Explore-Timeline-Column Timeline-Column-Left'>
+    <div className='Explore-Timeline Explore-Active'>
+      <div className='Explore-Timeline-Column Timeline-Column-Left Timeline-Column-Reveal-Left'>
         {props.yearPosition === 'left' ? (
           <div
             style={{
@@ -82,7 +79,7 @@ export function TimelineItem(props) {
         )}
       </div>
       <div className='Explore-Timeline-Separator'></div>
-      <div className='Explore-Timeline-Column Timeline-Column-Right'>
+      <div className='Explore-Timeline-Column Timeline-Column-Right Timeline-Column-Reveal-Right'>
         {props.yearPosition === 'right' ? (
           <div
             style={{

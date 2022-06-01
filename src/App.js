@@ -3,14 +3,35 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './home/Home';
 import { Explore } from './explore/Explore';
 import { Nav } from './nav/Nav';
+import { useState } from 'react';
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <Router>
-      <Nav></Nav>
+      <Nav toggleMenu={toggleMenu} menuOpen={menuOpen}></Nav>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/experience' element={<Explore />}></Route>
+        <Route
+          path='/'
+          element={
+            <div className={`App-Content-Wrapper ${menuOpen ? 'Rotated' : ''}`}>
+              <Home />
+            </div>
+          }
+        ></Route>
+        <Route
+          path='/experience'
+          element={
+            <div className={`App-Content-Wrapper ${menuOpen ? 'Rotated' : ''}`}>
+              <Explore />
+            </div>
+          }
+        ></Route>
         <Route path='*' element={<NotFound />} />
       </Routes>
     </Router>
