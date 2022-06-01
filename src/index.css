@@ -9,7 +9,7 @@
 }
 
 #root {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 body {
