@@ -23,7 +23,7 @@
 }
 
 .App-Content-Wrapper.Rotated {
-    transform: rotate(-25deg) translateY(-40vh);
+    transform: rotate3d(1, 0.5, 0, 25deg) translateX(135px) translateY(-50px);
 }
 
 .App-Nav a {
