@@ -16,7 +16,7 @@
 }
 
 .Explore-Timeline-Separator {
-    background-color: black;
+    background-color: var(--black);
     width: 1px;
 }
 
@@ -100,10 +100,10 @@
 }
 
 .Timeline-Tag {
-    background-color: #c3d4dc;
+    background-color: var(--main-blue);
     padding: 5px 10px;
     border-radius: 10px;
-    color: black;
+    color: var(--black);
     font-weight: 700;
     font-size: 12px;
 }

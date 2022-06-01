@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Shadows+Into+Light&display=swap');
 
-:root {}
+:root {
+  --main-blue: #c3d4dc;
+  --black: #1a1a1a;
+  --white: #fff;
+  --linkedin-blue: #0a66c2;
+  --mail-red: #d93025;
+}
 
 body {
   margin: 0;
-  background-color: #c3d4dc;
+  background-color: var(--main-blue);
   font-family: 'Lato', sans-serif;
   font-weight: 300;
-  color: #1a1a1a;
+  color: var(--black);
   overflow-x: hidden;
 }
 

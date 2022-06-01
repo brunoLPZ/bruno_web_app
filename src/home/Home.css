@@ -43,11 +43,11 @@
 }
 
 .Home-Blue {
-    color: #0a66c2;
+    color: var(--linkedin-blue);
 }
 
 .Home-Red {
-    color: #d93025;
+    color: var(--mail-red);
 }
 
 .Home-Shortcuts {

@@ -17,7 +17,7 @@
 }
 
 .App-Content-Wrapper {
-    background-color: #fff;
+    background-color: var(--white);
     transform-origin: top;
     transition: 1s all ease-in-out;
 }
@@ -31,7 +31,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 300;
-    color: black;
+    color: var(--black);
 }
 
 .App-Nav a.App-Nav-Active {
