@@ -5,7 +5,7 @@ export function Contact() {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center p-2 text-slate-200 h-screen"
+      className="flex flex-col items-center justify-center gap-10 p-2 text-slate-200 h-screen"
       style={{ minHeight: '500px' }}
     >
       <h1 className="text-2xl md:text-7xl">Contact</h1>
