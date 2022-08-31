@@ -1,26 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;700&family=Shadows+Into+Light&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --main-blue: #c3d4dc;
-  --black: #1a1a1a;
-  --white: #fff;
-  --linkedin-blue: #0a66c2;
-  --mail-red: #d93025;
-}
-
-#root {
-  overflow: hidden;
+html {
+  scroll-behavior: smooth !important;
 }
 
 body {
-  margin: 0;
-  background-color: var(--main-blue);
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  color: var(--black);
-}
-
-h1,
-h2 {
-  user-select: none;
+  background-color: #1e293b;
 }

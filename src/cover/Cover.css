@@ -1,0 +1,9 @@
+h1 > div {
+  min-width: 15rem;
+  padding-left: 2rem;
+}
+
+h2 > div {
+  min-width: 26rem;
+  padding-left: 4rem;
+}
