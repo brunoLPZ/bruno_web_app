@@ -68,8 +68,9 @@ function Experience(props) {
         Experience
       </h1>
       <div className="experience-list">
-        {EXPERIENCE.map((experience) => (
+        {EXPERIENCE.map((experience, idx) => (
           <div
+            key={`exp-${idx}`}
             className={`experience-item ${theme}`}
             style={{ opacity: Math.min(1, parallaxPercentage) }}
           >
@@ -86,7 +87,11 @@ function Experience(props) {
                 {experience.year}
               </h2>
               <div className="text-normal text-upper">Working at</div>
-              <img src={experience.logo} width={150}></img>
+              <img
+                alt={`Logo ${experience.project}`}
+                src={experience.logo}
+                width={150}
+              ></img>
             </div>
             <div
               className="experience-block"
@@ -104,7 +109,10 @@ function Experience(props) {
               <h2 className="text-normal text-upper">Technologies | Topics</h2>
               <div className="experience-technology-list">
                 {experience.technologies.map((technology) => (
-                  <div className={`experience-technology ${theme}`}>
+                  <div
+                    key={`${experience.position}-${technology}`}
+                    className={`experience-technology ${theme}`}
+                  >
                     {technology}
                   </div>
                 ))}

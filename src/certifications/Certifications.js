@@ -1,7 +1,7 @@
 import './Certifications.css';
 
 function Certifications(props) {
-  const { parallaxPercentage, theme } = props;
+  const { parallaxPercentage } = props;
 
   return (
     <div className="certifications-container">
