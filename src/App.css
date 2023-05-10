@@ -1,0 +1,100 @@
+#app {
+  min-height: 100vh;
+  height: 100%;
+}
+
+.app-page {
+  min-height: 100vh;
+  position: relative;
+}
+
+.app-theme-btn {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  margin: 1rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40px;
+}
+
+.app-theme-btn .cloud {
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+}
+
+.app-navbar {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  gap: 10px;
+  border-radius: 1rem;
+}
+
+.app-navbar.light {
+  background-color: #f9f7ee;
+}
+
+.app-navbar.dark {
+  background-color: #222222;
+}
+
+.app-navbar .app-navbar-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.app-navbar .app-navbar-item .circle {
+  width: 5px;
+  height: 5px;
+  border: 1px solid;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-navbar .app-navbar-item:hover {
+  cursor: pointer;
+  top: -1px;
+  font-weight: bold;
+}
+
+.app-navbar .app-navbar-item.active {
+  font-weight: bold;
+}
+
+.app-navbar .app-navbar-item:hover .circle-dark {
+  background-color: #f9f7ee;
+}
+
+.app-navbar .app-navbar-item.active .circle-dark {
+  background-color: #f9f7ee;
+}
+
+.app-navbar .app-navbar-item:hover .circle-light {
+  background-color: #222222;
+}
+
+.app-navbar .app-navbar-item.active .circle-light {
+  background-color: #222222;
+}
+
+.app-certificate-bg {
+  border-radius: 1rem;
+  height: 1080px !important;
+  width: 1920px !important;
+}
+
+.app-certificate-bg.light {
+  filter: invert(100%) opacity(70%) !important;
+}
+
+.app-certificate-bg.dark {
+  filter: opacity(70%) !important;
+}

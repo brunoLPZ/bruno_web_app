@@ -1,12 +1,157 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rajdhani&display=swap');
 
-html {
-  scroll-behavior: smooth !important;
+html,
+body {
+  margin: 0;
+  font-family: 'Rajdhani', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
-body {
-  background: rgb(38,52,75);
-  background: linear-gradient(180deg, rgba(38,52,75,1) 0%, rgba(17,34,61,1) 70%, rgba(0,0,0,1) 100%);
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.light {
+  background-color: #f9f7ee;
+  color: #222222;
+  transition: background-color 0.5s ease-out;
+  transition: color 1s ease-in;
+}
+
+.dark {
+  background-color: #222222;
+  color: #f9f7ee;
+  transition: background-color 0.5s ease-out;
+  transition: color 1s ease-in;
+}
+
+.text-title {
+  font-family: 'Anton', sans-serif;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.text-title-xl {
+  font-family: 'Anton', sans-serif;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.text-normal {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.text-normal-xl {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+@media (min-width: 576px) {
+  .text-title {
+    font-size: 3rem;
+  }
+  .text-title-xl {
+    font-size: 4rem;
+  }
+  .text-normal-xl {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-title {
+    font-size: 3rem;
+  }
+  .text-title-xl {
+    font-size: 5rem;
+  }
+  .text-normal-xl {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-title {
+    font-size: 3rem;
+  }
+  .text-title-xl {
+    font-size: 6rem;
+  }
+  .text-normal-xl {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .text-title {
+    font-size: 4rem;
+  }
+  .text-title-xl {
+    font-size: 8rem;
+  }
+  .text-normal-xl {
+    font-size: 4rem;
+  }
+}
+
+@keyframes appear-left-animation {
+  0% {
+    left: -3000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes appear-right-animation {
+  0% {
+    right: -3000px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.animate-appear-left {
+  position: relative;
+  left: -3000px;
+  animation: appear-left-animation 1s forwards;
+}
+
+.animate-appear-left-2x {
+  position: relative;
+  left: -3000px;
+  animation: appear-left-animation 1s 1s forwards;
+}
+
+.animate-appear-left-3x {
+  position: relative;
+  left: -3000px;
+  animation: appear-left-animation 1s 2s forwards;
+}
+
+.animate-appear-right {
+  position: relative;
+  right: -3000px;
+  animation: appear-right-animation 1s forwards;
+}
+
+.animate-appear-right-2x {
+  position: relative;
+  right: -3000px;
+  animation: appear-right-animation 1s 1s forwards;
+}
+
+.animate-appear-right-3x {
+  position: relative;
+  right: -3000px;
+  animation: appear-right-animation 1s 2s forwards;
 }
