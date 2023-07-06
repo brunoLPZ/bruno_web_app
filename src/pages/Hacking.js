@@ -1,7 +1,36 @@
 import ejptv2 from '../assets/ejptv2_badge.png';
 import htb from '../assets/htb.png';
+import {useEffect, useState} from "react";
 
 function Hacking() {
+
+    const [latestPostUrl, setLatestPostUrl] = useState();
+    useEffect(() => {
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' }
+        };
+        fetch('https://api.github.com/repos/brunoLPZ/brunolpz.github.io/contents/_posts', requestOptions)
+            .then(response => response.json())
+            .then(data => {
+                const filtered_posts = data.filter(post => post.name !== '2023-7-5-hello-world.md');
+                if (filtered_posts?.length) {
+                    filtered_posts.sort((post1, post2) => {
+                        const post1Date = new Date(post1.name.split('-').slice(0, 3).join('-'));
+                        const post2Date = new Date(post2.name.split('-').slice(0, 3).join('-'));
+                        if (post1Date.getTime() > post2Date.getTime()) {
+                            return 1;
+                        }
+                        if (post1Date.getTime() < post2Date.getTime()) {
+                            return -1;
+                        }
+                        return 0;
+                    });
+                    const postName = filtered_posts[filtered_posts.length - 1].split('-').slice(3).join('-').replace('.md', '');
+                    setLatestPostUrl('https://brunolpz.github.io/' + postName);
+                }
+            });
+    }, [])
 
     return <div className="h-screen relative snap-start text-slate-50 font-['VT323'] flex flex-col items-center gap-4 p-5">
         <div className="flex flex-col items-center">
@@ -17,7 +46,12 @@ function Hacking() {
                 <path d="M3 2h10v2h8v14H11v-2H5v6H3V2zm2 12h8v2h6V6h-8V4H5v10z"/>
             </svg> challenges.</p>
             <div className="flex flex-col items-center gap-5">
-                <p className="text-xl">HTB walkthroughs comming soon...</p>
+                {!latestPostUrl ?
+                    <p className="text-xl">HTB walkthroughs comming soon...</p> :
+                    <p className="text-xl">Check my latest HTB walkthrough
+                        <a className="inline-block underline text-[#b5ff00] animate-bounce hover:animate-none" href={latestPostUrl} target="_blank" rel="noreferrer">here</a>
+                    </p>
+                }
                 <img className="contrast-200" src={htb} alt="htb logo"/>
             </div>
         </div>
